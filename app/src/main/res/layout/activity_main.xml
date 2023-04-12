@@ -1,0 +1,1178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Waraney Willem Palandeng Kalangie
+    10119904
+    IF10K
+-->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_app_intro"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_normal_100"
+            android:layout_marginTop="@dimen/space_normal_150"
+            android:layout_marginEnd="@dimen/space_normal_100"
+            android:elevation="0dp"
+            app:cardBackgroundColor="@color/green_50"
+            app:cardCornerRadius="@dimen/space_mini_80"
+            app:cardElevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/img_logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_normal_150"
+                    android:layout_marginTop="@dimen/space_normal_150"
+                    android:layout_marginBottom="@dimen/space_normal_150"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/img_logo"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/txt_app_name"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="ImageContrastCheck" />
+
+                <TextView
+                    android:id="@+id/txt_app_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/space_normal_125"
+                    android:layout_marginStart="@dimen/space_mini_100"
+                    android:layout_marginTop="@dimen/space_normal_100"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center"
+                    android:text="@string/app_name"
+                    android:textColor="@color/neutral_grey"
+                    android:textSize="@dimen/txt_normal_100"
+                    app:layout_constraintStart_toEndOf="@id/img_logo"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="TextSizeCheck" />
+
+                <TextView
+                    android:id="@+id/txt_tagline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/space_normal_105"
+                    android:layout_marginTop="@dimen/space_mini_20"
+                    android:fontFamily="@font/lato_regular"
+                    android:gravity="center"
+                    android:text="@string/tagline"
+                    android:textColor="@color/neutral_grey_600"
+                    android:textSize="@dimen/txt_mini_120"
+                    app:layout_constraintStart_toStartOf="@id/txt_app_name"
+                    app:layout_constraintTop_toBottomOf="@id/txt_app_name"
+                    tools:ignore="TextSizeCheck,TextContrastCheck" />
+
+                <TextView
+                    android:id="@+id/txt_company"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/space_normal_105"
+                    android:layout_marginTop="@dimen/space_mini_20"
+                    android:fontFamily="@font/lato_regular"
+                    android:gravity="center"
+                    android:text="@string/company"
+                    android:textColor="@color/neutral_grey_600"
+                    android:textSize="@dimen/txt_mini_120"
+                    app:layout_constraintStart_toStartOf="@id/txt_app_name"
+                    app:layout_constraintTop_toBottomOf="@id/txt_tagline"
+                    tools:ignore="TextSizeCheck,TextContrastCheck" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/txt_profile_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_normal_150"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/img_profile"
+            app:layout_constraintStart_toStartOf="@id/card_app_intro"
+            app:layout_constraintTop_toBottomOf="@id/card_app_intro" />
+
+        <TextView
+            android:id="@+id/txt_profile_name"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/space_normal_125"
+            android:layout_marginStart="@dimen/space_mini_80"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:text="@string/profile_name"
+            android:textColor="@color/neutral_grey"
+            android:textSize="@dimen/txt_normal_100"
+            app:layout_constraintStart_toEndOf="@id/txt_profile_photo"
+            app:layout_constraintTop_toTopOf="@id/txt_profile_photo"
+            tools:ignore="TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/txt_profile_role"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/space_normal_115"
+            android:layout_marginTop="@dimen/space_mini_20"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center"
+            android:text="@string/profile_role"
+            android:textColor="@color/neutral_grey_600"
+            android:textSize="@dimen/txt_mini_140"
+            app:layout_constraintStart_toStartOf="@id/txt_profile_name"
+            app:layout_constraintTop_toBottomOf="@id/txt_profile_name"
+            tools:ignore="TextSizeCheck,TextContrastCheck" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_working_hour"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_normal_175"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/space_mini_80"
+            app:cardElevation="0dp"
+            app:layout_constraintEnd_toEndOf="@id/card_app_intro"
+            app:layout_constraintStart_toStartOf="@id/card_app_intro"
+            app:layout_constraintTop_toBottomOf="@id/txt_profile_role">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/space_normal_100"
+                android:layout_marginEnd="@dimen/space_normal_100">
+
+                <TextView
+                    android:id="@+id/txt_heading_working_hour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/space_normal_162.5"
+                    android:layout_marginTop="@dimen/space_normal_100"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center"
+                    android:text="@string/heading_working_hour"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_normal_125"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="TextSizeCheck" />
+
+                <TextView
+                    android:id="@+id/txt_working_hour_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_normal_100"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@string/working_hour_status"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/txt_mini_140"
+                    app:layout_constraintStart_toStartOf="@id/txt_heading_working_hour"
+                    app:layout_constraintTop_toBottomOf="@id/txt_heading_working_hour" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_progress_hour"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="@dimen/space_mini_80"
+                    app:cardBackgroundColor="@color/green_600"
+                    app:cardCornerRadius="@dimen/space_mini_80"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/txt_heading_working_hour"
+                    app:layout_constraintTop_toBottomOf="@id/txt_working_hour_status">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/txt_working_hour"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/green_800"
+                            android:fontFamily="@font/roboto_bold"
+                            android:gravity="center|start"
+                            android:paddingStart="@dimen/space_mini_80"
+                            android:paddingEnd="0dp"
+                            android:text="@string/working_hour"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/txt_normal_125"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/img_clock"
+                            app:layout_constraintHorizontal_weight="8"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/img_clock"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/txt_mini_120"
+                            android:contentDescription="@string/app_name"
+                            android:scaleType="fitEnd"
+                            android:src="@drawable/img_clock"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_weight="2"
+                            app:layout_constraintStart_toEndOf="@id/txt_working_hour"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="ImageContrastCheck" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/txt_working_hour_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_mini_80"
+                    android:fontFamily="@font/lato_regular"
+                    android:text="@string/working_hour_desc"
+                    android:textColor="@color/mid_black"
+                    android:textSize="@dimen/txt_mini_120"
+                    app:layout_constraintStart_toStartOf="@id/txt_heading_working_hour"
+                    app:layout_constraintTop_toBottomOf="@id/card_progress_hour"
+                    tools:ignore="TextContrastCheck" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="@dimen/space_normal_150"
+                    android:layout_marginBottom="@dimen/space_normal_150"
+                    android:backgroundTint="@color/green_700"
+                    android:fontFamily="@font/work_sans_semi_bold"
+                    android:text="@string/btn_working_hour"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txt_mini_140"
+                    app:cornerRadius="@dimen/space_mini_80"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/txt_heading_working_hour"
+                    app:layout_constraintTop_toBottomOf="@id/txt_working_hour_desc"
+                    tools:ignore="VisualLintButtonSize" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_report"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_normal_150"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/space_mini_80"
+            app:cardElevation="1dp"
+            app:layout_constraintEnd_toEndOf="@id/card_app_intro"
+            app:layout_constraintStart_toStartOf="@id/card_app_intro"
+            app:layout_constraintTop_toBottomOf="@id/card_working_hour">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_normal_100"
+                android:layout_marginEnd="@dimen/txt_normal_100">
+
+                <TextView
+                    android:id="@+id/txt_heading_report"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_normal_100"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@string/report_heading"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_normal_125"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txt_march"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_normal_150"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@string/report_march_month"
+                    android:textColor="@color/green_900"
+                    android:textSize="@dimen/txt_normal_100"
+                    app:layout_constraintEnd_toStartOf="@id/txt_april"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toStartOf="@id/txt_heading_report"
+                    app:layout_constraintTop_toBottomOf="@id/txt_heading_report" />
+
+                <TextView
+                    android:id="@+id/txt_april"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@string/report_april_month"
+                    android:textColor="@color/green_900"
+                    android:textSize="@dimen/txt_normal_100"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toEndOf="@id/txt_march"
+                    app:layout_constraintTop_toTopOf="@id/txt_march" />
+
+                <GridLayout
+                    android:id="@+id/grid_march"
+                    android:layout_width="0dp"
+                    android:layout_height="210dp"
+                    android:layout_marginTop="@dimen/space_mini_80"
+                    android:layout_marginEnd="15dp"
+                    android:columnCount="5"
+                    android:rowCount="7"
+                    app:layout_constraintEnd_toStartOf="@id/txt_april"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toStartOf="@id/txt_march"
+                    app:layout_constraintTop_toBottomOf="@id/txt_march">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginEnd="@dimen/space_mini_20"
+                        android:layout_marginBottom="@dimen/space_mini_20"
+                        app:cardBackgroundColor="@color/green_300"
+                        app:cardCornerRadius="@dimen/space_mini_20"
+                        app:cardElevation="0dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginEnd="@dimen/space_mini_20"
+                        android:layout_marginBottom="@dimen/space_mini_20"
+                        app:cardBackgroundColor="@color/green_800"
+                        app:cardCornerRadius="@dimen/space_mini_20"
+                        app:cardElevation="0dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginEnd="@dimen/space_mini_20"
+                        android:layout_marginBottom="@dimen/space_mini_20"
+                        app:cardBackgroundColor="@color/green_800"
+                        app:cardCornerRadius="@dimen/space_mini_20"
+                        app:cardElevation="0dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginEnd="@dimen/space_mini_20"
+                        android:layout_marginBottom="@dimen/space_mini_20"
+                        app:cardBackgroundColor="@color/green_800"
+                        app:cardCornerRadius="@dimen/space_mini_20"
+                        app:cardElevation="0dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginBottom="@dimen/space_mini_20"
+                        app:cardBackgroundColor="@color/green_800"
+                        app:cardCornerRadius="@dimen/space_mini_20"
+                        app:cardElevation="0dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginEnd="@dimen/space_mini_20"
+                        android:layout_marginBottom="@dimen/space_mini_20"
+                        app:cardBackgroundColor="@color/green_800"
+                        app:cardCornerRadius="@dimen/space_mini_20"
+                        app:cardElevation="0dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginEnd="@dimen/space_mini_20"
+                        android:layout_marginBottom="@dimen/space_mini_20"
+                        app:cardBackgroundColor="@color/green_500"
+                        app:cardCornerRadius="@dimen/space_mini_20"
+                        app:cardElevation="0dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginEnd="@dimen/space_mini_20"
+                        android:layout_marginBottom="@dimen/space_mini_20"
+                        app:cardBackgroundColor="@color/green_300"
+                        app:cardCornerRadius="@dimen/space_mini_20"
+                        app:cardElevation="0dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginEnd="@dimen/space_mini_20"
+                        android:layout_marginBottom="@dimen/space_mini_20"
+                        app:cardBackgroundColor="@color/green_300"
+                        app:cardCornerRadius="@dimen/space_mini_20"
+                        app:cardElevation="0dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginBottom="@dimen/space_mini_20"
+                        app:cardBackgroundColor="@color/green_800"
+                        app:cardCornerRadius="@dimen/space_mini_20"
+                        app:cardElevation="0dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginEnd="@dimen/space_mini_20"
+                        android:layout_marginBottom="@dimen/space_mini_20"
+                        app:cardBackgroundColor="@color/green_800"
+                        app:cardCornerRadius="@dimen/space_mini_20"
+                        app:cardElevation="0dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginEnd="@dimen/space_mini_20"
+                        android:layout_marginBottom="@dimen/space_mini_20"
+                        app:cardBackgroundColor="@color/green_800"
+                        app:cardCornerRadius="@dimen/space_mini_20"
+                        app:cardElevation="0dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginEnd="@dimen/space_mini_20"
+                        android:layout_marginBottom="@dimen/space_mini_20"
+                        app:cardBackgroundColor="@color/green_100"
+                        app:cardCornerRadius="@dimen/space_mini_20"
+                        app:cardElevation="0dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginEnd="@dimen/space_mini_20"
+                        android:layout_marginBottom="@dimen/space_mini_20"
+                        app:cardBackgroundColor="@color/green_800"
+                        app:cardCornerRadius="@dimen/space_mini_20"
+                        app:cardElevation="0dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginBottom="@dimen/space_mini_20"
+                        app:cardBackgroundColor="@color/green_100"
+                        app:cardCornerRadius="@dimen/space_mini_20"
+                        app:cardElevation="0dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginEnd="@dimen/space_mini_20"
+                        android:layout_marginBottom="@dimen/space_mini_20"
+                        app:cardBackgroundColor="@color/green_800"
+                        app:cardCornerRadius="@dimen/space_mini_20"
+                        app:cardElevation="0dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginEnd="@dimen/space_mini_20"
+                        android:layout_marginBottom="@dimen/space_mini_20"
+                        app:cardBackgroundColor="@color/green_500"
+                        app:cardCornerRadius="@dimen/space_mini_20"
+                        app:cardElevation="0dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginEnd="@dimen/space_mini_20"
+                        android:layout_marginBottom="@dimen/space_mini_20"
+                        app:cardBackgroundColor="@color/green_100"
+                        app:cardCornerRadius="@dimen/space_mini_20"
+                        app:cardElevation="0dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginEnd="@dimen/space_mini_20"
+                        android:layout_marginBottom="@dimen/space_mini_20"
+                        app:cardBackgroundColor="@color/green_200"
+                        app:cardCornerRadius="@dimen/space_mini_20"
+                        app:cardElevation="0dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginBottom="@dimen/space_mini_20"
+                        app:cardBackgroundColor="@color/green_600"
+                        app:cardCornerRadius="@dimen/space_mini_20"
+                        app:cardElevation="0dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginEnd="@dimen/space_mini_20"
+                        android:layout_marginBottom="@dimen/space_mini_20"
+                        app:cardBackgroundColor="@color/green_200"
+                        app:cardCornerRadius="@dimen/space_mini_20"
+                        app:cardElevation="0dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginEnd="@dimen/space_mini_20"
+                        android:layout_marginBottom="@dimen/space_mini_20"
+                        app:cardBackgroundColor="@color/green_200"
+                        app:cardCornerRadius="@dimen/space_mini_20"
+                        app:cardElevation="0dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginEnd="@dimen/space_mini_20"
+                        android:layout_marginBottom="@dimen/space_mini_20"
+                        app:cardBackgroundColor="@color/green_200"
+                        app:cardCornerRadius="@dimen/space_mini_20"
+                        app:cardElevation="0dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginEnd="@dimen/space_mini_20"
+                        android:layout_marginBottom="@dimen/space_mini_20"
+                        app:cardBackgroundColor="@color/green_600"
+                        app:cardCornerRadius="@dimen/space_mini_20"
+                        app:cardElevation="0dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginBottom="@dimen/space_mini_20"
+                        app:cardBackgroundColor="@color/green_600"
+                        app:cardCornerRadius="@dimen/space_mini_20"
+                        app:cardElevation="0dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginEnd="@dimen/space_mini_20"
+                        android:layout_marginBottom="@dimen/space_mini_20"
+                        app:cardBackgroundColor="@color/green_800"
+                        app:cardCornerRadius="@dimen/space_mini_20"
+                        app:cardElevation="0dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginEnd="@dimen/space_mini_20"
+                        android:layout_marginBottom="@dimen/space_mini_20"
+                        app:cardBackgroundColor="@color/green_600"
+                        app:cardCornerRadius="@dimen/space_mini_20"
+                        app:cardElevation="0dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginEnd="@dimen/space_mini_20"
+                        android:layout_marginBottom="@dimen/space_mini_20"
+                        app:cardBackgroundColor="@color/green_600"
+                        app:cardCornerRadius="@dimen/space_mini_20"
+                        app:cardElevation="0dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginEnd="@dimen/space_mini_20"
+                        android:layout_marginBottom="@dimen/space_mini_20"
+                        app:cardBackgroundColor="@color/green_600"
+                        app:cardCornerRadius="@dimen/space_mini_20"
+                        app:cardElevation="0dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginBottom="@dimen/space_mini_20"
+                        app:cardBackgroundColor="@color/green_200"
+                        app:cardCornerRadius="@dimen/space_mini_20"
+                        app:cardElevation="0dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginEnd="@dimen/space_mini_20"
+                        app:cardBackgroundColor="@color/green_200"
+                        app:cardCornerRadius="@dimen/space_mini_20"
+                        app:cardElevation="0dp" />
+                </GridLayout>
+
+                <GridLayout
+                    android:id="@+id/grid_april"
+                    android:layout_width="0dp"
+                    android:layout_height="180dp"
+                    android:layout_marginEnd="15dp"
+                    android:columnCount="5"
+                    android:rowCount="6"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toStartOf="@id/txt_april"
+                    app:layout_constraintTop_toTopOf="@id/grid_march">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginEnd="@dimen/space_mini_20"
+                        android:layout_marginBottom="@dimen/space_mini_20"
+                        app:cardBackgroundColor="@color/green_600"
+                        app:cardCornerRadius="@dimen/space_mini_20"
+                        app:cardElevation="0dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginEnd="@dimen/space_mini_20"
+                        android:layout_marginBottom="@dimen/space_mini_20"
+                        app:cardBackgroundColor="@color/green_700"
+                        app:cardCornerRadius="@dimen/space_mini_20"
+                        app:cardElevation="0dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginEnd="@dimen/space_mini_20"
+                        android:layout_marginBottom="@dimen/space_mini_20"
+                        app:cardBackgroundColor="@color/green_700"
+                        app:cardCornerRadius="@dimen/space_mini_20"
+                        app:cardElevation="0dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginEnd="@dimen/space_mini_20"
+                        android:layout_marginBottom="@dimen/space_mini_20"
+                        app:cardBackgroundColor="@color/green_300"
+                        app:cardCornerRadius="@dimen/space_mini_20"
+                        app:cardElevation="0dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginBottom="@dimen/space_mini_20"
+                        app:cardBackgroundColor="@color/green_300"
+                        app:cardCornerRadius="@dimen/space_mini_20"
+                        app:cardElevation="0dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginEnd="@dimen/space_mini_20"
+                        android:layout_marginBottom="@dimen/space_mini_20"
+                        app:cardBackgroundColor="@color/green_600"
+                        app:cardCornerRadius="@dimen/space_mini_20"
+                        app:cardElevation="0dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginEnd="@dimen/space_mini_20"
+                        android:layout_marginBottom="@dimen/space_mini_20"
+                        app:cardBackgroundColor="@color/green_300"
+                        app:cardCornerRadius="@dimen/space_mini_20"
+                        app:cardElevation="0dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginEnd="@dimen/space_mini_20"
+                        android:layout_marginBottom="@dimen/space_mini_20"
+                        app:cardBackgroundColor="@color/green_700"
+                        app:cardCornerRadius="@dimen/space_mini_20"
+                        app:cardElevation="0dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginEnd="@dimen/space_mini_20"
+                        android:layout_marginBottom="@dimen/space_mini_20"
+                        app:cardBackgroundColor="@color/green_300"
+                        app:cardCornerRadius="@dimen/space_mini_20"
+                        app:cardElevation="0dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginBottom="@dimen/space_mini_20"
+                        app:cardBackgroundColor="@color/green_600"
+                        app:cardCornerRadius="@dimen/space_mini_20"
+                        app:cardElevation="0dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginEnd="@dimen/space_mini_20"
+                        android:layout_marginBottom="@dimen/space_mini_20"
+                        app:cardBackgroundColor="@color/green_200"
+                        app:cardCornerRadius="@dimen/space_mini_20"
+                        app:cardElevation="0dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginEnd="@dimen/space_mini_20"
+                        android:layout_marginBottom="@dimen/space_mini_20"
+                        app:cardBackgroundColor="@color/green_700"
+                        app:cardCornerRadius="@dimen/space_mini_20"
+                        app:cardElevation="0dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginEnd="@dimen/space_mini_20"
+                        android:layout_marginBottom="@dimen/space_mini_20"
+                        app:cardBackgroundColor="@color/green_600"
+                        app:cardCornerRadius="@dimen/space_mini_20"
+                        app:cardElevation="0dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginEnd="@dimen/space_mini_20"
+                        android:layout_marginBottom="@dimen/space_mini_20"
+                        app:cardBackgroundColor="@color/green_300"
+                        app:cardCornerRadius="@dimen/space_mini_20"
+                        app:cardElevation="0dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginBottom="@dimen/space_mini_20"
+                        app:cardBackgroundColor="@color/green_300"
+                        app:cardCornerRadius="@dimen/space_mini_20"
+                        app:cardElevation="0dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginEnd="@dimen/space_mini_20"
+                        android:layout_marginBottom="@dimen/space_mini_20"
+                        app:cardBackgroundColor="@color/green_600"
+                        app:cardCornerRadius="@dimen/space_mini_20"
+                        app:cardElevation="0dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginEnd="@dimen/space_mini_20"
+                        android:layout_marginBottom="@dimen/space_mini_20"
+                        app:cardBackgroundColor="@color/green_300"
+                        app:cardCornerRadius="@dimen/space_mini_20"
+                        app:cardElevation="0dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginEnd="@dimen/space_mini_20"
+                        android:layout_marginBottom="@dimen/space_mini_20"
+                        app:cardBackgroundColor="@color/green_300"
+                        app:cardCornerRadius="@dimen/space_mini_20"
+                        app:cardElevation="0dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginEnd="@dimen/space_mini_20"
+                        android:layout_marginBottom="@dimen/space_mini_20"
+                        app:cardBackgroundColor="@color/green_300"
+                        app:cardCornerRadius="@dimen/space_mini_20"
+                        app:cardElevation="0dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginBottom="@dimen/space_mini_20"
+                        app:cardBackgroundColor="@color/green_600"
+                        app:cardCornerRadius="@dimen/space_mini_20"
+                        app:cardElevation="0dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginEnd="@dimen/space_mini_20"
+                        android:layout_marginBottom="@dimen/space_mini_20"
+                        app:cardBackgroundColor="@color/green_700"
+                        app:cardCornerRadius="@dimen/space_mini_20"
+                        app:cardElevation="0dp"
+                        tools:ignore="TooManyViews" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginEnd="@dimen/space_mini_20"
+                        android:layout_marginBottom="@dimen/space_mini_20"
+                        app:cardBackgroundColor="@color/grey_100"
+                        app:cardCornerRadius="@dimen/space_mini_20"
+                        app:cardElevation="0dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginEnd="@dimen/space_mini_20"
+                        android:layout_marginBottom="@dimen/space_mini_20"
+                        app:cardBackgroundColor="@color/grey_100"
+                        app:cardCornerRadius="@dimen/space_mini_20"
+                        app:cardElevation="0dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginEnd="@dimen/space_mini_20"
+                        android:layout_marginBottom="@dimen/space_mini_20"
+                        app:cardBackgroundColor="@color/grey_100"
+                        app:cardCornerRadius="@dimen/space_mini_20"
+                        app:cardElevation="0dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginBottom="@dimen/space_mini_20"
+                        app:cardBackgroundColor="@color/grey_100"
+                        app:cardCornerRadius="@dimen/space_mini_20"
+                        app:cardElevation="0dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginEnd="@dimen/space_mini_20"
+                        android:layout_marginBottom="@dimen/space_mini_20"
+                        app:cardBackgroundColor="@color/grey_100"
+                        app:cardCornerRadius="@dimen/space_mini_20"
+                        app:cardElevation="0dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginEnd="@dimen/space_mini_20"
+                        android:layout_marginBottom="@dimen/space_mini_20"
+                        app:cardBackgroundColor="@color/grey_100"
+                        app:cardCornerRadius="@dimen/space_mini_20"
+                        app:cardElevation="0dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginEnd="@dimen/space_mini_20"
+                        android:layout_marginBottom="@dimen/space_mini_20"
+                        app:cardBackgroundColor="@color/grey_100"
+                        app:cardCornerRadius="@dimen/space_mini_20"
+                        app:cardElevation="0dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginEnd="@dimen/space_mini_20"
+                        android:layout_marginBottom="@dimen/space_mini_20"
+                        app:cardBackgroundColor="@color/grey_100"
+                        app:cardCornerRadius="@dimen/space_mini_20"
+                        app:cardElevation="0dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginBottom="@dimen/space_mini_20"
+                        app:cardBackgroundColor="@color/grey_100"
+                        app:cardCornerRadius="@dimen/space_mini_20"
+                        app:cardElevation="0dp" />
+                </GridLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="@dimen/space_large_150"
+                    android:layout_marginBottom="@dimen/space_normal_162.5"
+                    android:backgroundTint="@color/green_700"
+                    android:fontFamily="@font/work_sans_semi_bold"
+                    android:text="@string/btn_report"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txt_mini_140"
+                    app:cornerRadius="@dimen/space_mini_80"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/txt_heading_report"
+                    app:layout_constraintTop_toBottomOf="@id/grid_march"
+                    tools:ignore="VisualLintButtonSize" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/img_person"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_normal_150"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/img_person_time"
+            app:layout_constraintEnd_toStartOf="@id/img_people"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="@id/card_app_intro"
+            app:layout_constraintTop_toBottomOf="@id/card_report" />
+
+        <ImageView
+            android:id="@+id/img_people"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/img_people"
+            app:layout_constraintBottom_toBottomOf="@id/img_person"
+            app:layout_constraintEnd_toStartOf="@id/img_report"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@id/img_person"
+            app:layout_constraintTop_toTopOf="@id/img_person" />
+
+        <ImageView
+            android:id="@+id/img_report"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/img_book"
+            app:layout_constraintEnd_toEndOf="@id/card_app_intro"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@id/img_people"
+            app:layout_constraintTop_toTopOf="@id/img_people" />
+
+        <TextView
+            android:id="@+id/txt_person"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_mini_80"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/permission"
+            android:textColor="@color/neutral_grey_800"
+            android:textSize="@dimen/txt_mini_140"
+            app:layout_constraintEnd_toEndOf="@id/img_person"
+            app:layout_constraintStart_toStartOf="@id/img_person"
+            app:layout_constraintTop_toBottomOf="@id/img_person" />
+
+        <TextView
+            android:id="@+id/txt_people"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_mini_80"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/presence"
+            android:textColor="@color/neutral_grey_800"
+            android:textSize="@dimen/txt_mini_140"
+            app:layout_constraintEnd_toEndOf="@id/img_people"
+            app:layout_constraintStart_toStartOf="@id/img_people"
+            app:layout_constraintTop_toBottomOf="@id/img_people" />
+
+        <TextView
+            android:id="@+id/txt_report"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_mini_80"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/report"
+            android:textColor="@color/neutral_grey_800"
+            android:textSize="@dimen/txt_mini_140"
+            app:layout_constraintEnd_toEndOf="@id/img_report"
+            app:layout_constraintStart_toStartOf="@id/img_report"
+            app:layout_constraintTop_toBottomOf="@id/img_report" />
+
+        <ImageView
+            android:id="@+id/img_agenda"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_large_100"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/img_agenda"
+            app:layout_constraintEnd_toStartOf="@id/img_booking"
+            app:layout_constraintStart_toStartOf="@id/card_app_intro"
+            app:layout_constraintTop_toBottomOf="@id/txt_person" />
+
+        <ImageView
+            android:id="@+id/img_booking"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/img_book"
+            app:layout_constraintEnd_toEndOf="@id/img_wiki"
+            app:layout_constraintStart_toEndOf="@id/img_agenda"
+            app:layout_constraintTop_toTopOf="@id/img_agenda" />
+
+        <ImageView
+            android:id="@+id/img_wiki"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/img_wiki"
+            app:layout_constraintEnd_toEndOf="@id/card_app_intro"
+            app:layout_constraintStart_toEndOf="@id/img_booking"
+            app:layout_constraintTop_toTopOf="@id/img_booking" />
+
+        <TextView
+            android:id="@+id/txt_agenda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_mini_80"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/agenda"
+            android:textColor="@color/neutral_grey_800"
+            android:textSize="@dimen/txt_mini_140"
+            app:layout_constraintEnd_toEndOf="@id/img_agenda"
+            app:layout_constraintStart_toStartOf="@id/img_agenda"
+            app:layout_constraintTop_toBottomOf="@id/img_agenda" />
+
+        <TextView
+            android:id="@+id/txt_book"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_mini_80"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/booking"
+            android:textColor="@color/neutral_grey_800"
+            android:textSize="@dimen/txt_mini_140"
+            app:layout_constraintEnd_toEndOf="@id/img_booking"
+            app:layout_constraintStart_toStartOf="@id/img_booking"
+            app:layout_constraintTop_toBottomOf="@id/img_booking" />
+
+        <TextView
+            android:id="@+id/txt_wiki"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_mini_80"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/wiki"
+            android:textColor="@color/neutral_grey_800"
+            android:textSize="@dimen/txt_mini_140"
+            android:paddingBottom="@dimen/space_normal_175"
+            app:layout_constraintEnd_toEndOf="@id/img_wiki"
+            app:layout_constraintStart_toStartOf="@id/img_wiki"
+            app:layout_constraintTop_toBottomOf="@id/img_wiki" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

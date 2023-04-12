@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <dimen name="space_mini_20">2dp</dimen>
+    <dimen name="space_mini_80">8dp</dimen>
+    <dimen name="space_mini_100">10dp</dimen>
+
+    <dimen name="space_normal_100">16dp</dimen>
+    <dimen name="space_normal_105">18dp</dimen>
+    <dimen name="space_normal_115">20dp</dimen>
+    <dimen name="space_normal_125">22dp</dimen>
+    <dimen name="space_normal_150">24dp</dimen>
+    <dimen name="space_normal_162.5">26dp</dimen>
+    <dimen name="space_normal_175">28dp</dimen>
+
+    <dimen name="space_large_100">32dp</dimen>
+    <dimen name="space_large_118">38dp</dimen>
+    <dimen name="space_large_150">48dp</dimen>
+
+
+    <dimen name="txt_mini_100">10sp</dimen>
+    <dimen name="txt_mini_120">12sp</dimen>
+    <dimen name="txt_mini_140">14sp</dimen>
+
+    <dimen name="txt_normal_100">16sp</dimen>
+    <dimen name="txt_normal_125">20sp</dimen>
+</resources>
